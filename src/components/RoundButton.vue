@@ -1,6 +1,6 @@
 <template>
-      <button class="mdl-button mdl-js-button rounded-button">
-        <i class="material-icons">clear</i>
+      <button v-on:click="onClicked" class="mdl-button mdl-js-button rounded-button">
+        <i class="material-icons">{{ icon }}</i>
       </button>
 </template>
 
@@ -15,11 +15,7 @@
 <
 <script>
   export default {
-    name: 'RoundButton',
-    data () {
-      return {
-        icon: ''
-      }
-    }
-}
+    name: 'round-button',
+    props: ['icon', 'clicked']
+  }
 </script>

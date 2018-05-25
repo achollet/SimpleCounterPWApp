@@ -25,7 +25,7 @@
         <i class="material-icons">repeat</i>
       </button>
     </div>
-    <RoundButton v-on:click="clear()" class="reset-button"></RoundButton>
+    <round-button icon = 'clear' :clicked = clear class="reset-button"></round-button>
   </div>
 </template>
 
@@ -41,14 +41,14 @@ export default {
     }
   },
   methods: {
-    addOneRep () {
+    addOneRep: function () {
       this.repetitions++
     },
-    addOneSerie () {
+    addOneSerie: function () {
       this.series++
       this.repetitions = 1
     },
-    clear () {
+    clear: function () {
       this.repetitions = 1
       this.series = 1
     }
