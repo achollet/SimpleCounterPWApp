@@ -1,21 +1,16 @@
 <template>
-  <div id ="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Series</span>
-      </div>
-    </header>
-    <main>
-      <router-view></router-view>
-    </main>
+  <div id ="app">
+    <HomeView></HomeView>
   </div>
 </template>
 
 <script>
+import HomeView from './components/HomeView'
 require('material-design-lite')
 
 export default {
-  name: 'app'
+  name: 'app',
+  components: { HomeView }
 }
 </script>
 
