@@ -8,33 +8,52 @@
     </div>
 
     <div class="serie-value label">
-      X {{serie}}
+      X {{series}}
     </div>
     <div class="value-separator label">/</div>
     <div class="repetition-value label">
-      {{reps}}
+      {{repetitions}}
     </div>
 
     <div class="add-button rounded-button">
-      <button class="mdl-button mdl-js-button">
+      <button v-on:click="addOneRep()" class="mdl-button mdl-js-button">
         <i class="material-icons">add</i>
       </button>
     </div>
     <div class="repeat-button rounded-button">
-      <button class="mdl-button mdl-js-button">
+      <button v-on:click="addOneSerie()" class="mdl-button mdl-js-button">
         <i class="material-icons">repeat</i>
       </button>
     </div>
-    <div class="reset-button rounded-button">
-      <button class="mdl-button mdl-js-button ">
-        <i class="material-icons">clear</i>
-      </button>
-    </div>
+    <RoundButton v-on:click="clear()" class="reset-button"></RoundButton>
   </div>
 </template>
 
 <script>
-export default {}
+import RoundButton from './RoundButton.vue'
+export default {
+  name: 'HomeView',
+  components: {RoundButton},
+  data () {
+    return {
+      series: 1,
+      repetitions: 1
+    }
+  },
+  methods: {
+    addOneRep () {
+      this.repetitions++
+    },
+    addOneSerie () {
+      this.series++
+      this.repetitions = 1
+    },
+    clear () {
+      this.repetitions = 1
+      this.series = 1
+    }
+  }
+}
 </script>
 
 <style>
@@ -126,11 +145,6 @@ export default {}
   align-self: center;
 }
 
-.rounded-button
-{
-  border-color: white;
-  border-width: 2px;
-}
 </style>
 
 
