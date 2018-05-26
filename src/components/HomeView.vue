@@ -15,17 +15,9 @@
       {{repetitions}}
     </div>
 
-    <div class="add-button rounded-button">
-      <button v-on:click="addOneRep()" class="mdl-button mdl-js-button">
-        <i class="material-icons">add</i>
-      </button>
-    </div>
-    <div class="repeat-button rounded-button">
-      <button v-on:click="addOneSerie()" class="mdl-button mdl-js-button">
-        <i class="material-icons">repeat</i>
-      </button>
-    </div>
-    <round-button icon = 'clear' :clicked = clear class="reset-button"></round-button>
+    <round-button icon='add' :onClick=addOneSerie class="add-button"></round-button>
+    <round-button icon='repeat' :onClick=addOneSerie class="repeat-button"></round-button>
+    <round-button icon='clear' :onClick=reset class="reset-button"></round-button>
   </div>
 </template>
 
@@ -48,7 +40,7 @@ export default {
       this.series++
       this.repetitions = 1
     },
-    clear: function () {
+    reset: function () {
       this.repetitions = 1
       this.series = 1
     }
