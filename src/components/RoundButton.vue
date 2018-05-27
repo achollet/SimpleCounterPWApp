@@ -7,8 +7,8 @@
 <style scoped>
 .rounded-button
 {
-  width: 10%;
-  height: 10%;
+  width: 100%;
+  height: 100%;
   padding-bottom: 10%;
   border-radius: 50%;
   border: 3px solid white;
@@ -17,7 +17,7 @@
 
 .round-button-icon {
     display: block;
-    width: 76%;
+    width: auto;
     padding: 12%;
     height: auto;
 }

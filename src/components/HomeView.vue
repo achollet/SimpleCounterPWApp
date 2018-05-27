@@ -47,7 +47,8 @@ export default {
 
 <style>
 .container {
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
@@ -64,16 +65,15 @@ export default {
 
 .buttons-container {
   display: grid;
-  grid-template-columns: 20px 1fr 10% 1fr 20px;
-  grid-template-rows: 20px 1fr 40px 1fr 20px;
-  grid-row-gap: 10px;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-rows: 4% 6fr 4% 2fr 1fr;
+  grid-row-gap: 1px;
 }
 
 .label {
   color: white;
-  font-family: monospace;
+  font-family: Roboto;
   font-size: 1.7em;
-  font-weight: 600;
 }
 
 .serie-label {
