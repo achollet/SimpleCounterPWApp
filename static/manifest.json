@@ -1,6 +1,6 @@
 {
-  "name": "simple_counter",
-  "short_name": "simple_counter",
+  "name": "counter",
+  "short_name": "counter",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
@@ -13,9 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
-  "orientation" : "portrait",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "orientation" : "portrait"
 }
